@@ -9,9 +9,6 @@ Each user can only access their own data, which is handled using authentication 
 
 This project helped me understand how authentication works, how frontend and backend communicate, and how to handle real backend errors.
 
-🌐 Live Demo:
-https://contact-diary-frontend.netlify.app
-
 ✨ Features
 🔐 Authentication
 
@@ -169,11 +166,6 @@ Authentication
 5.Backend validation for phone number (10 digits only)
 
 6.Proper error handling
-
-🌍 Deployment
-
-Frontend: Netlify
-https://contact-diary-frontend.netlify.app
 
 Backend: Render
 (Environment variables securely configured)
