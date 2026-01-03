@@ -1,241 +1,207 @@
-# Contact Diary 📒
+📒 Contact Diary
 
-A full-stack web application for managing personal contacts with user authentication and secure data management.
+A full-stack web application that allows users to securely store and manage personal contacts with authentication.
 
-## 🌟 Overview
+🔍 About the Project
 
-Contact Diary is a modern, responsive web application that allows users to manage their personal contacts securely. Built with React.js frontend and Node.js/Express backend, it features user authentication, CRUD operations, and personalized contact management where each user can only access their own contacts.
+Contact Diary is a MERN stack project where users can sign up, log in, and manage their own contacts.
+Each user can only access their own data, which is handled using authentication and backend validation.
 
-**Live Demo:** [https://contact-diary-frontend.netlify.app](https://contact-diary-frontend.netlify.app)
+This project helped me understand how authentication works, how frontend and backend communicate, and how to handle real backend errors.
 
-## ✨ Features
+🌐 Live Demo:
+https://contact-diary-frontend.netlify.app
 
-### 🔐 Authentication System
-- **User Registration**: Secure signup with password hashing
-- **User Login**: JWT token-based authentication
-- **Session Management**: Automatic token validation and session handling
-- **Logout Functionality**: Secure session termination
+✨ Features
+🔐 Authentication
 
-### 📋 Contact Management
-- **Add Contacts**: Create new contacts with name, email, and phone number
-- **View Contacts**: Display all personal contacts in an organized layout
-- **Edit Contacts**: Update existing contact information
-- **Delete Contacts**: Remove contacts with confirmation dialog
-- **Personal Data**: Each user can only access their own contacts
+User signup and login
 
-### 🎨 User Interface
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Bootstrap Integration**: Modern, clean, and professional styling
-- **Intuitive Navigation**: Easy-to-use interface with clear visual feedback
-- **Form Validation**: Client-side validation for better user experience
+Passwords hashed using bcrypt
 
-## 🛠️ Technology Stack
+JWT-based authentication
 
-### Frontend
-- **React.js** (v19.1.1) - Modern UI library
-- **React Router DOM** (v7.7.1) - Client-side routing
-- **Axios** (v1.11.0) - HTTP client for API calls
-- **Bootstrap** (v5.3.7) - CSS framework for responsive design
-- **React Icons** (v5.5.0) - Icon library
+Secure logout
 
-### Backend
-- **Node.js** - JavaScript runtime environment
-- **Express.js** (v5.1.0) - Web application framework
-- **MongoDB** - NoSQL database
-- **Mongoose** (v8.17.0) - MongoDB object modeling
-- **JWT** (v9.0.2) - JSON Web Token for authentication
-- **bcryptjs** (v3.0.2) - Password hashing library
-- **CORS** (v2.8.5) - Cross-origin resource sharing
+Protected routes (only logged-in users can access contacts)
 
-## 📁 Project Structure
+📇 Contact Management
 
-```
+Add new contacts (name, phone, email)
+
+View personal contacts
+
+Update contact details
+
+Delete contacts
+
+Each contact is linked to the logged-in user
+
+Phone number validation (only 10-digit numbers allowed)
+
+🎨 User Interface
+
+Simple and clean UI
+
+Responsive design
+
+Easy navigation
+
+Form validation for better user experience
+
+🛠️ Tech Stack
+Frontend
+
+React.js
+
+React Router
+
+Axios
+
+CSS / Bootstrap
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+JWT (JSON Web Token)
+
+bcryptjs
+
+📁 Project Structure
 Contact-Diary/
-├── contact-diary-backend/
+├── backend/
 │   ├── config/
-│   │   └── db.js                    # Database configuration
+│   │   └── db.js                # MongoDB connection
 │   ├── controllers/
-│   │   └── contactController.js     # Contact business logic
+│   │   ├── authController.js    # Signup & login logic
+│   │   └── contactController.js # Contact CRUD logic
 │   ├── middleware/
-│   │   └── authMiddleware.js        # JWT authentication middleware
+│   │   └── authMiddleware.js    # JWT verification
 │   ├── models/
-│   │   ├── Contact.js               # Contact schema
-│   │   └── User.js                  # User schema
+│   │   ├── User.js              # User schema
+│   │   └── Contact.js           # Contact schema
 │   ├── routes/
-│   │   ├── authRoutes.js            # Authentication routes
-│   │   └── contactRoutes.js         # Contact CRUD routes
-│   ├── .gitignore
-│   ├── package.json
-│   └── server.js                    # Main server file
+│   │   ├── authRoutes.js        # Auth routes
+│   │   └── contactRoutes.js     # Contact routes
+│   ├── server.js
+│   └── package.json
 │
-├── contact-diary-frontend/
-│   ├── public/
-│   │   └── _redirects               # Netlify redirect rules
+├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── ContactForm.js       # Contact form component
-│   │   │   └── ContactList.js       # Contact list component
 │   │   ├── pages/
-│   │   │   ├── ContactsPage.js      # Main contacts page
-│   │   │   ├── Login.js             # Login page
-│   │   │   └── Signup.js            # Registration page
 │   │   ├── styles/
-│   │   │   └── ContactDiary.css     # Custom styles
-│   │   ├── api.js                   # Axios configuration
-│   │   └── App.js                   # Main App component
-│   ├── package.json
-│   └── README.md
+│   │   ├── api.js               # Axios configuration
+│   │   └── App.js
+│   └── package.json
 │
-├── .gitattributes
 └── README.md
-```
 
-## 🚀 Installation & Setup
+🔐 Authentication Logic
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB database
-- Git
+Authentication is handled using a separate authController:
 
-### Backend Setup
+Signup creates a new user with a hashed password
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Tanishka293/Contact-Diary.git
-   cd Contact-Diary/contact-diary-backend
-   ```
+Login verifies credentials and generates a JWT token
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+The token is sent with requests to identify the logged-in user
 
-3. **Environment Variables:**
-   Create a `.env` file in the backend directory:
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret_key
-   PORT=5000
-   ```
+Protected routes use middleware to verify the token
 
-4. **Start the backend server:**
-   ```bash
-   npm start
-   ```
+🚀 How to Run the Project Locally
+Backend Setup
+cd backend
+npm install
+npm start
 
-### Frontend Setup
 
-1. **Navigate to frontend directory:**
-   ```bash
-   cd ../contact-diary-frontend
-   ```
+Create a .env file inside backend:
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
 
-3. **Start the development server:**
-   ```bash
-   npm start
-   ```
+Frontend Setup
+cd frontend
+npm install
+npm start
 
-4. **Open your browser:**
-   Navigate to `http://localhost:3000`
 
-## 🔧 API Endpoints
+Open in browser:
 
-### Authentication Routes
-- `POST /api/auth/signup` - User registration
-- `POST /api/auth/login` - User login
+http://localhost:3000
 
-### Contact Routes (Protected)
-- `GET /api/contacts` - Get all user contacts
-- `POST /api/contacts` - Create new contact
-- `PUT /api/contacts/:id` - Update contact
-- `DELETE /api/contacts/:id` - Delete contact
+🔗 API Endpoints
+Authentication
 
-## 🌐 Deployment
+POST /api/auth/signup
 
-### Backend Deployment (Render)
-- Backend is deployed on Render: `https://contact-diary-backend.onrender.com`
-- Environment variables configured in Render dashboard
-- Automatic deployment from GitHub repository
+POST /api/auth/login
 
-### Frontend Deployment (Netlify)
-- Frontend is deployed on Netlify: `https://contact-diary-frontend.netlify.app`
-- Redirect rules configured for React Router
-- Automatic deployment from GitHub repository
+Contacts (Protected)
 
-## 💾 Database Schema
+GET /api/contacts
 
-### User Schema
-```javascript
-{
-  name: String (required),
-  email: String (required, unique),
-  password: String (required, hashed),
-  timestamps: true
-}
-```
+POST /api/contacts
 
-### Contact Schema
-```javascript
-{
-  name: String (required),
-  phone: String (required),
-  email: String,
-  userId: ObjectId (required, ref: 'User'),
-  timestamps: true
-}
-```
+PUT /api/contacts/:id
 
-## 🔒 Security Features
+DELETE /api/contacts/:id
 
-- **Password Security**: Passwords are hashed using bcryptjs
-- **JWT Authentication**: Secure token-based authentication
-- **Protected Routes**: All contact operations require valid authentication
-- **User Isolation**: Users can only access their own data
-- **CORS Configuration**: Properly configured for secure cross-origin requests
-- **Input Validation**: Server-side validation for all inputs
+🔒 Security & Validation
 
-## 🎯 Key Highlights
+Password hashing using bcrypt
 
-- **Full-Stack Implementation**: Complete frontend and backend architecture
-- **Responsive Design**: Mobile-first approach with Bootstrap integration
-- **Real-time Updates**: Immediate UI updates after CRUD operations
-- **Error Handling**: Comprehensive error handling on both client and server
-- **Production Ready**: Deployed and configured for production environments
-- **Clean Code**: Well-structured, modular, and maintainable codebase
+JWT-based authentication
 
-## 🚦 Usage
+Protected backend routes
 
-1. **Register**: Create a new account with your details
-2. **Login**: Sign in with your credentials
-3. **Add Contact**: Use the form to add new contacts
-4. **Manage Contacts**: View, edit, or delete your contacts
-5. **Logout**: Securely end your session
+User-specific data access
 
-## 🤝 Contributing
+Backend validation for phone number (10 digits only)
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Proper error handling
 
-## 📝 License
+🌍 Deployment
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Frontend: Netlify
+https://contact-diary-frontend.netlify.app
 
-## 👨‍💻 Author
+Backend: Render
+(Environment variables securely configured)
 
-**Tanishka Sharma**
-- LinkedIn: [Tanishka Sharma](https://www.linkedin.com/in/tanishka-sharma-286404257)
-- GitHub: [@Tanishka293](https://github.com/Tanishka293)
+📚 What I Learned
 
-## 🙏 Acknowledgments
+How authentication works using JWT
 
-- Thanks to the React and Node.js communities for excellent documentation
-- Bootstrap team for the responsive CSS framework
-- MongoDB for the flexible database solution
+How authController handles signup and login
 
----
+How backend identifies users using tokens
 
-⭐ **If you found this project helpful, please give it a star!** ⭐
+How to link user data using userId
+
+How to debug backend validation errors
+
+How frontend and backend communicate
+
+How to deploy a full-stack project
+
+👩‍💻 Author
+
+Bhumika Joshi
+
+GitHub: (https://github.com/bhumikajoshi17)
+
+LinkedIn:(https://www.linkedin.com/in/bhumika-joshi-7819882b8/)
+
+📝 License
+
+This project is licensed under the MIT License.
