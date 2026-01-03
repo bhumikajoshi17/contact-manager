@@ -75,8 +75,8 @@ Backend
 6.bcryptjs
 
 ## Project Structure
-
 ```text
+
 Contact-Manager/
 │
 ├── backend/
@@ -103,6 +103,7 @@ Contact-Manager/
 │       └── main.css
 │
 └── README.md
+```
 🔐 Authentication Logic
 
 Authentication is handled using a separate authController:
