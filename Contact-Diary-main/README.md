@@ -74,52 +74,35 @@ Backend
 
 6.bcryptjs
 
+## Project Structure
+
+```text
 Contact-Manager/
 │
 ├── backend/
-│   │
 │   ├── config/
 │   │   └── db.js
-│   │
 │   ├── controllers/
 │   │   ├── authController.js
 │   │   └── contactController.js
-│   │
 │   ├── middleware/
 │   │   └── authMiddleware.js
-│   │
 │   ├── models/
 │   │   ├── User.js
 │   │   └── Contact.js
-│   │
 │   ├── routes/
 │   │   ├── authRoutes.js
 │   │   └── contactRoutes.js
-│   │
-│   ├── .env
-│   ├── package.json
 │   └── server.js
 │
 ├── frontend/
-│   │
-│   ├── public/
-│   │   └── index.html
-│   │
-│   └── src/
-│       ├── api/
-│       │   └── api.js
-│       │
-│       ├── pages/
-│       │   ├── Login.js
-│       │   └── Contacts.js
-│       │
-│       └── styles/
-│           └── main.css
+│   ├── pages/
+│   │   ├── Login.js
+│   │   └── Contacts.js
+│   └── styles/
+│       └── main.css
 │
-├── .gitignore
-├── LICENSE
 └── README.md
-
 🔐 Authentication Logic
 
 Authentication is handled using a separate authController:
