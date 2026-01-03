@@ -15,29 +15,29 @@ https://contact-diary-frontend.netlify.app
 ✨ Features
 🔐 Authentication
 
-User signup and login
+1.User signup and login
 
-Passwords hashed using bcrypt
+2.Passwords hashed using bcrypt
 
-JWT-based authentication
+3.JWT-based authentication
 
-Secure logout
+4.Secure logout
 
-Protected routes (only logged-in users can access contacts)
+5.Protected routes (only logged-in users can access contacts)
 
 📇 Contact Management
 
-Add new contacts (name, phone, email)
+1.Add new contacts (name, phone, email)
 
-View personal contacts
+2.View personal contacts
 
-Update contact details
+3.Update contact details
 
-Delete contacts
+4.Delete contacts
 
-Each contact is linked to the logged-in user
+5.Each contact is linked to the logged-in user
 
-Phone number validation (only 10-digit numbers allowed)
+6.Phone number validation (only 10-digit numbers allowed)
 
 🎨 User Interface
 
@@ -52,44 +52,44 @@ Form validation for better user experience
 🛠️ Tech Stack
 Frontend
 
-React.js
+1.React.js
 
-React Router
+2.React Router
 
-Axios
+3.Axios
 
-CSS / Bootstrap
+4.CSS / Bootstrap
 
 Backend
 
-Node.js
+1.Node.js
 
-Express.js
+2.Express.js
 
-MongoDB
+3.MongoDB
 
-Mongoose
+4.Mongoose
 
-JWT (JSON Web Token)
+5.JWT (JSON Web Token)
 
-bcryptjs
+6.bcryptjs
 
 📁 Project Structure
 Contact-Diary/
 ├── backend/
 │   ├── config/
-│   │   └── db.js                # MongoDB connection
+│   │   └── db.js                
 │   ├── controllers/
-│   │   ├── authController.js    # Signup & login logic
-│   │   └── contactController.js # Contact CRUD logic
+│   │   ├── authController.js    
+│   │   └── contactController.js 
 │   ├── middleware/
-│   │   └── authMiddleware.js    # JWT verification
+│   │   └── authMiddleware.js    
 │   ├── models/
-│   │   ├── User.js              # User schema
-│   │   └── Contact.js           # Contact schema
+│   │   ├── User.js              
+│   │   └── Contact.js          
 │   ├── routes/
-│   │   ├── authRoutes.js        # Auth routes
-│   │   └── contactRoutes.js     # Contact routes
+│   │   ├── authRoutes.js       
+│   │   └── contactRoutes.js     
 │   ├── server.js
 │   └── package.json
 │
@@ -98,7 +98,7 @@ Contact-Diary/
 │   │   ├── components/
 │   │   ├── pages/
 │   │   ├── styles/
-│   │   ├── api.js               # Axios configuration
+│   │   ├── api.js
 │   │   └── App.js
 │   └── package.json
 │
@@ -142,33 +142,33 @@ http://localhost:3000
 🔗 API Endpoints
 Authentication
 
-POST /api/auth/signup
+1.POST /api/auth/signup
 
-POST /api/auth/login
+2.POST /api/auth/login
 
-Contacts (Protected)
+3.Contacts (Protected)
 
-GET /api/contacts
+4.GET /api/contacts
 
-POST /api/contacts
+5.POST /api/contacts
 
-PUT /api/contacts/:id
+6.PUT /api/contacts/:id
 
-DELETE /api/contacts/:id
+7.DELETE /api/contacts/:id
 
 🔒 Security & Validation
 
-Password hashing using bcrypt
+1.Password hashing using bcrypt
 
-JWT-based authentication
+2.JWT-based authentication
 
-Protected backend routes
+3.Protected backend routes
 
-User-specific data access
+4.User-specific data access
 
-Backend validation for phone number (10 digits only)
+5.Backend validation for phone number (10 digits only)
 
-Proper error handling
+6.Proper error handling
 
 🌍 Deployment
 
@@ -180,19 +180,19 @@ Backend: Render
 
 📚 What I Learned
 
-How authentication works using JWT
+1.How authentication works using JWT
 
-How authController handles signup and login
+2.How authController handles signup and login
 
-How backend identifies users using tokens
+3.How backend identifies users using tokens
 
-How to link user data using userId
+4.How to link user data using userId
 
-How to debug backend validation errors
+5.How to debug backend validation errors
 
-How frontend and backend communicate
+6.How frontend and backend communicate
 
-How to deploy a full-stack project
+7.How to deploy a full-stack project
 
 👩‍💻 Author
 
@@ -202,6 +202,3 @@ GitHub: (https://github.com/bhumikajoshi17)
 
 LinkedIn:(https://www.linkedin.com/in/bhumika-joshi-7819882b8/)
 
-📝 License
-
-This project is licensed under the MIT License.
