@@ -74,34 +74,50 @@ Backend
 
 6.bcryptjs
 
-📁 Project Structure
-Contact-Diary/
+Contact-Manager/
+│
 ├── backend/
+│   │
 │   ├── config/
-│   │   └── db.js                
+│   │   └── db.js
+│   │
 │   ├── controllers/
-│   │   ├── authController.js    
-│   │   └── contactController.js 
+│   │   ├── authController.js
+│   │   └── contactController.js
+│   │
 │   ├── middleware/
-│   │   └── authMiddleware.js    
+│   │   └── authMiddleware.js
+│   │
 │   ├── models/
-│   │   ├── User.js              
-│   │   └── Contact.js          
+│   │   ├── User.js
+│   │   └── Contact.js
+│   │
 │   ├── routes/
-│   │   ├── authRoutes.js       
-│   │   └── contactRoutes.js     
-│   ├── server.js
-│   └── package.json
+│   │   ├── authRoutes.js
+│   │   └── contactRoutes.js
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── server.js
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── styles/
-│   │   ├── api.js
-│   │   └── App.js
-│   └── package.json
+│   │
+│   ├── public/
+│   │   └── index.html
+│   │
+│   └── src/
+│       ├── api/
+│       │   └── api.js
+│       │
+│       ├── pages/
+│       │   ├── Login.js
+│       │   └── Contacts.js
+│       │
+│       └── styles/
+│           └── main.css
 │
+├── .gitignore
+├── LICENSE
 └── README.md
 
 🔐 Authentication Logic
